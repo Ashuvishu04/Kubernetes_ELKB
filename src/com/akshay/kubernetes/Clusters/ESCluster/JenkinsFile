@@ -1,0 +1,16 @@
+node{
+    service_name = 'elasticSearch'
+    stage("Clone Repo"){
+        checkout([$class: 'GitSCM',
+                  branches: [[name: '*/master']],
+                  userRemoteConfigs: [[url: 'https://github.com/Ashuvishu04/Kubernetes_ELKB.git']]])
+    }
+    stage("Testing"){
+        echo "Testing"
+    }
+    stage("deploy"){
+        withKubeConfig([credentialsId: 'user1', serverUrl: 'https://localhost']) {
+             sh 'kubectl apply -f ESCluster/es.yml'
+        }
+    }
+}
