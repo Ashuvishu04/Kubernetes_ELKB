@@ -1,0 +1,19 @@
+node
+{
+    stage("git clone"){
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+        doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [],
+        userRemoteConfigs: [[url: 'https://github.com/Ashuvishu04/Kubernetes_ELKB.git']]])
+    }
+
+    stage("test"){
+        echo "testing"
+    }
+
+    stage("running k8s yaml"){
+        sh "kubectl apply -f elasticsearch/es-depl.yaml"
+        sh "kubectl apply -f elasticsearch/es-svc.yaml"
+        sh "kubectl get pods --all-namespaces"
+        sh "kubectl get svc"
+    }
+}
