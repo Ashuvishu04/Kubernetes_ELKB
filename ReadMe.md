@@ -53,8 +53,7 @@
     brew install jenkins-lts
     brew services start jenkins-lts
     // After this jenkins is hosted on http://localhost:8080/
-    
- // Test 
+     
     
     
       
