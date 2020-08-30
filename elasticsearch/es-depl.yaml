@@ -4,15 +4,14 @@ metadata:
   name: es
   labels:
     component: elasticsearch
+    role: elasticsearch
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-      component: elasticsearch
   template:
     metadata:
       labels:
         component: elasticsearch
+        role: elasticsearch
     spec:
       initContainers:
       - name: init-sysctl
