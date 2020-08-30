@@ -54,6 +54,20 @@
     brew services start jenkins-lts
     // After this jenkins is hosted on http://localhost:8080/
      
+   
+   Steps: 
+   Sign up to AWS
+   Create IAM user ,id key
+   Set up EKS (Elastic Kubernetes Service)
+   
+   Go to jenkins machine - ssh -i jenkins.pem  ubuntu@13.127.5.11
     
-    
+ 
+   
+   
+   Jenkins server
+   aws cli
+   aws configure
+   Eks to create kubernete cluster
+   Kube config 
       
