@@ -61,13 +61,14 @@
    Set up EKS (Elastic Kubernetes Service)
    
    Go to jenkins machine - ssh -i jenkins.pem  ubuntu@13.127.5.11
-    
- 
+   Installation -  aws cli,aws configure,  Eks to create kubernates cluster, Kube config
+   sudo su 
+   kubectl get svc (Get external ip to open kibana)
+   kubectl get pods
+   kubectl exec -it <pod_name> bash (To enter into the pod)
+  
+  
    
+  
    
-   Jenkins server
-   aws cli
-   aws configure
-   Eks to create kubernete cluster
-   Kube config 
       

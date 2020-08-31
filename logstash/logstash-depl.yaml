@@ -28,7 +28,7 @@ data:
     }
     output {
         elasticsearch {
-                hosts => [ "http://elasticsearch.default.svc:9200" ]
+                hosts => [ "http://elasticsearch.default.svc.cluster.local:9200" ]
         }
     }
 ---
