@@ -66,6 +66,7 @@
    kubectl get svc (Get external ip to open kibana)
    kubectl get pods
    kubectl exec -it <pod_name> bash (To enter into the pod)
+   Demo Test
   
   
    
