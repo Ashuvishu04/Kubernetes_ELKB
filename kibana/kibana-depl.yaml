@@ -20,7 +20,7 @@ spec:
         image: docker.elastic.co/kibana/kibana:6.3.2
         env:
         - name: "CLUSTER_NAME"
-          value: "escluster"
+          value: "myesdb"
         - name: XPACK_SECURITY_ENABLED
           value: 'false'
         - name: XPACK_GRAPH_ENABLED
