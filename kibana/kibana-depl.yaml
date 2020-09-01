@@ -20,7 +20,7 @@ spec:
         image: docker.elastic.co/kibana/kibana:6.3.2
         env:
         - name: "CLUSTER_NAME"
-          value: "myesdb"
+          value: "escluster"
         - name: XPACK_SECURITY_ENABLED
           value: 'false'
         - name: XPACK_GRAPH_ENABLED
@@ -30,7 +30,7 @@ spec:
         - name: XPACK_REPORTING_ENABLED
           value: 'false'
         - name: ELASTICSEARCH_URL
-          value: 'http://elasticsearch.default.svc.cluster.local:9200'
+          value: 'http://elasticsearch:9200'
         resources:
           limits:
             cpu: 1000m
